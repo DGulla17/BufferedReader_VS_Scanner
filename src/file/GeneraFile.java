@@ -8,14 +8,9 @@ import java.io.OutputStreamWriter;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 
-/**
- *
- * @author gulla.davide
- */
-public class Filee {
-
-    public static void main(String[] args) {
-       //sbagliato
+public class GeneraFile {
+    
+    GeneraFile(){
         try {
             int righe = 500000;
             // TODO code application logic here
@@ -40,5 +35,22 @@ public class Filee {
             Logger.getLogger(Filee.class.getName()).log(Level.SEVERE, null, ex);
         }
     }
+
+        
+    
+
+    
+
+        
+       
+    
+
+    
+
+        
+    
+
+    
+
 
 }
