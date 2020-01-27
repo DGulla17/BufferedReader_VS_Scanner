@@ -1,4 +1,4 @@
-package dvfssd;
+package file;
 
 import java.io.BufferedWriter;
 import java.io.File;
@@ -29,8 +29,8 @@ public class Filee {
             BufferedWriter bw = new BufferedWriter(new OutputStreamWriter(fos));
             for (int i = 1; i < righe; i++) {
                 int n = (int) (Math.random() * 255);
-                bw.write(n + " ");                
-                if(i%5==0){
+                bw.write(n + " ");
+                if (i % 5 == 0) {
                     bw.newLine();
                 }
             }
