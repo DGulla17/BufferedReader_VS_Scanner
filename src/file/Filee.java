@@ -1,12 +1,6 @@
 package file;
 
-import java.io.BufferedWriter;
-import java.io.File;
-import java.io.FileOutputStream;
-import java.io.IOException;
-import java.io.OutputStreamWriter;
-import java.util.logging.Level;
-import java.util.logging.Logger;
+import java.util.Scanner;
 
 /**
  *
@@ -15,30 +9,23 @@ import java.util.logging.Logger;
 public class Filee {
 
     public static void main(String[] args) {
-       //sbagliato
-        try {
-            int righe = 500000;
-            // TODO code application logic here
-            File file = new File("C:\\Users\\gulla.davide\\Desktop\\schweine.txt");
-            file.getAbsolutePath();
-            if (file.createNewFile()) {
-                System.out.println("File creato!");
-            } else {
-                System.out.println("File già creato");
-            }
-            FileOutputStream fos = new FileOutputStream(file);
-            BufferedWriter bw = new BufferedWriter(new OutputStreamWriter(fos));
-            for (int i = 1; i < righe; i++) {
-                int n = (int) (Math.random() * 255);
-                bw.write(n + " ");
-                if (i % 5 == 0) {
-                    bw.newLine();
-                }
-            }
-            bw.close();
-        } catch (IOException ex) {
-            Logger.getLogger(Filee.class.getName()).log(Level.SEVERE, null, ex);
+
+        System.out.println("Cosa vuoi fare?\n1 -> Genera file\n2 -> Leggi file con BufferedReader\n3 -> Leggi file con Scanner");
+        Scanner input = new Scanner(System.in);
+        int choise = input.nextInt();
+        GeneraFile filee=null;
+        BufferedReaderr reader=null;
+        Scannerr scanner=null;
+        switch (choise) {
+
+            case 1:
+                filee = new GeneraFile();
+            case 2:
+                reader = new BufferedReaderr(filee.getFile());
+            case 3:
+                scanner = new Scannerr(filee.getFile());
+            default:
+                System.out.println("Inserisci 1/2/3");
         }
     }
-
 }

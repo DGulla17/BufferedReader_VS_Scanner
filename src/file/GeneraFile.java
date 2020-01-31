@@ -9,12 +9,13 @@ import java.util.logging.Level;
 import java.util.logging.Logger;
 
 public class GeneraFile {
-    
-    GeneraFile(){
+
+    public File file;
+
+    GeneraFile() {
         try {
             int righe = 500000;
-            // TODO code application logic here
-            File file = new File("C:\\Users\\gulla.davide\\Desktop\\schweine.txt");
+            file = new File("C:\\Users\\gulla.davide\\Desktop\\schweine.txt");
             file.getAbsolutePath();
             if (file.createNewFile()) {
                 System.out.println("File creato!");
@@ -36,21 +37,7 @@ public class GeneraFile {
         }
     }
 
-        
-    
-
-    
-
-        
-       
-    
-
-    
-
-        
-    
-
-    
-
-
+    public File getFile() {
+        return file;
+    }
 }

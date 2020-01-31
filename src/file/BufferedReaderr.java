@@ -14,10 +14,7 @@ public class BufferedReaderr {
         BufferedReader reader = null;
         try {
             reader = new BufferedReader(new FileReader(file));
-            
-            
-            
-            
+
         } catch (FileNotFoundException ex) {
             Logger.getLogger(BufferedReaderr.class.getName()).log(Level.SEVERE, null, ex);
         } finally {
@@ -29,4 +26,6 @@ public class BufferedReaderr {
         }
     }
 
+    BufferedReaderr() {   
+    }   
 }
